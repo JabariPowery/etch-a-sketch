@@ -11,3 +11,11 @@ function makeRows(rows, cols) {
 };
 
 makeRows(16, 16);
+
+let d = document.getElementsByClassName("grid-item");
+Object.keys(d).forEach(a=>{
+  d[a].addEventListener("mouseover", function(e) {
+    e.target.style.background = "blue";
+  })
+})
+
