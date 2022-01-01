@@ -19,3 +19,18 @@ Object.keys(d).forEach(a=>{
   })
 })
 
+function changeBackground(){
+  Object.keys(d).forEach(a=> {
+    d[a].style.background = "white";
+  })
+}
+
+let btn = document.createElement("button");
+btn.innerText ="Reset Grid";
+btn.addEventListener("click", function() { 
+  changeBackground();
+  let newGrid = prompt ("Please enter number of squares per side for new grid: ");
+  makeRows(newGrid, newGrid);
+} );
+
+document.body.appendChild(btn);
